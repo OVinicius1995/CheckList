@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0e2730">
+  <meta name="description" content="Nossa linha do tempo de conquistas até a tão sonhada viagem para Aruba.">
+  <title>Nosso caminho até Aruba ✈</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f7f7;
+      --surface: #fff;
+      --surface2: #eaf1f0;
+      --ink: #14272c;
+      --muted: #5c7378;
+      --faint: #84979b;
+      --line: #d8e4e3;
+      --teal: #0e7c86;
+      --tealDark: #09616a;
+      --tealPale: #e1f2f0;
+      --gold: #b17924;
+      --goldPale: #fcf3df;
+      --shadow: 0 8px 32px -20px rgba(13,43,46,.22), 0 2px 8px -6px rgba(13,43,46,.12);
+      --title: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+      --body: 'IBM Plex Sans', ui-sans-serif, system-ui, sans-serif;
+      --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0d171b;
+      --surface: #152328;
+      --surface2: #1d3337;
+      --ink: #edf8f7;
+      --muted: #adc3c4;
+      --faint: #879fa2;
+      --line: #284147;
+      --teal: #67d6cf;
+      --tealDark: #83e0d9;
+      --tealPale: #173a3c;
+      --gold: #e4b564;
+      --goldPale: #393020;
+      --shadow: 0 8px 28px -12px rgba(0,0,0,.33);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]):not([data-theme="dark"]) {
+        color-scheme: dark;
+        --bg: #0d171b; --surface: #152328; --surface2: #1d3337; --ink: #edf8f7;
+        --muted: #adc3c4; --faint: #879fa2; --line: #284147; --teal: #67d6cf;
+        --tealDark: #83e0d9; --tealPale: #173a3c; --gold: #e4b564;
+        --goldPale: #393020; --shadow: 0 8px 28px -12px rgba(0,0,0,.33);
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--bg); font: 400 16px/1.55 var(--body); -webkit-font-smoothing: antialiased; }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding-inline: 28px; }
+    .masthead { background: var(--surface); border-bottom: 1px solid var(--line); }
+    .masthead-inner { display:flex; justify-content:space-between; align-items:center; gap:20px; min-height:78px; }
+    .brand { display:flex; align-items:center; gap:12px; min-width:0; }
+    .brand-mark { display:grid; place-items:center; width:38px; height:38px; background: #0d343b; color:#c1eeeb; border-radius:12px; flex:none; }
+    .brand-mark svg { width:22px; height:22px; }
+    .brand-title { display:block; font:800 .98rem/1.2 var(--title); letter-spacing:-.025em; }
+    .brand-subtitle { display:block; font:500 .67rem/1.4 var(--mono); color:var(--muted); letter-spacing:.055em; text-transform:uppercase; margin-top:3px; }
+    .nav-actions { display:flex; align-items:center; gap:10px; }
+    .text-nav { font-weight:700; font-size:.82rem; padding:10px 12px; color:var(--muted); }
+    .text-nav:hover { color:var(--teal); }
+    .theme-btn { display:flex; align-items:center; justify-content:center; gap:8px; padding:10px 12px; background:var(--surface2); border:1px solid var(--line); border-radius:999px; color:var(--ink); font-size:.8rem; font-weight:600; }
+    .theme-btn:hover { filter:brightness(.98); }
+    .theme-icon { font-size:1.03rem; line-height:1; }
+
+    .hero { position:relative; overflow:hidden; background:#102e36; border-radius:22px; margin-top:31px; isolation:isolate; box-shadow:0 20px 60px -37px rgba(10,40,48,.6); }
+    .hero::before { content:""; position:absolute; width:400px; height:400px; border-radius:50%; background:#1d7074; filter:blur(100px); opacity:.5; left:-150px; top:-170px; z-index:-1; }
+    .hero-inner { display:grid; grid-template-columns: 1.05fr .95fr; min-height:414px; }
+    .hero-copy { display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:48px 22px 48px 49px; position:relative; z-index:2; }
+    .eyebrow { font:600 .72rem/1.4 var(--mono); letter-spacing:.12em; color:#84dfd6; text-transform:uppercase; }
+    .hero h1 { margin:17px 0 18px; color:#f7ffff; font:800 clamp(2.25rem, 3.3vw, 3.65rem)/1.095 var(--title); letter-spacing:-.055em; max-width:550px; }
+    .hero h1 em { font-style:normal; color:#93e0d7; }
+    .hero-lead { color:#c5d9d8; font-size:1.02rem; line-height:1.7; margin:0; max-width:40ch; }
+    .hero-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:25px; }
+    .hero-pill { border:1px solid rgba(179,224,218,.24); background:rgba(225,250,247,.08); color:#dcf4f0; border-radius:999px; padding:7px 12px; font-size:.75rem; font-weight:600; }
+    .hero-art { position:relative; display:flex; align-items:center; justify-content:center; padding:24px 30px 24px 0; min-width:0; }
+    .postcard { position:relative; width:min(100%,444px); aspect-ratio:1.23; border:7px solid rgba(255,255,255,.12); border-radius:23px; overflow:hidden; transform:rotate(2deg); box-shadow:0 24px 43px rgba(0,0,0,.23); background:#a6e5e2; }
+    .postcard svg { display:block; width:100%; height:100%; }
+    .postcard-label { position:absolute; top:23px; left:24px; color:#16343c; font:800 clamp(1.7rem, 3.2vw, 2.8rem)/1 var(--title); letter-spacing:.12em; text-shadow:0 1px 1px #fff6; }
+    .postcard-sub { position:absolute; top:65px; left:25px; color:#20474d; font:600 .68rem var(--mono); letter-spacing:.1em; }
+    .postcard-stamp { position:absolute; right:22px; bottom:17px; background:rgba(255,255,255,.88); color:#0d5059; border-radius:999px; padding:9px 14px; font:700 .7rem var(--mono); letter-spacing:.03em; }
+
+    .dashboard { display:grid; grid-template-columns: 1.35fr 1fr; gap:15px; margin-top:20px; }
+    .panel { background:var(--surface); border:1px solid var(--line); box-shadow:var(--shadow); border-radius:17px; padding:25px 26px; }
+    .panel-label { display:block; margin-bottom:9px; font:600 .69rem var(--mono); letter-spacing:.085em; text-transform:uppercase; color:var(--teal); }
+    .panel h2 { margin:0; font:800 1.25rem/1.24 var(--title); letter-spacing:-.028em; }
+    .progress-summary { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .progress-figure { font:800 clamp(2.65rem, 5vw, 3.5rem)/1 var(--title); letter-spacing:-.06em; color:var(--teal); }
+    .progress-figure small { font:600 1.13rem var(--title); color:var(--faint); }
+    .progress-bar { height:11px; background:var(--surface2); border-radius:50px; overflow:hidden; margin-top:23px; }
+    .progress-fill { height:100%; width:0%; background:linear-gradient(90deg, #10a69f, #68d6ca); border-radius:inherit; transition:width .45s ease; }
+    .progress-footer { display:flex; justify-content:space-between; gap:12px; margin:12px 0 0; font-size:.83rem; color:var(--muted); }
+    .progress-footer b { color:var(--ink); }
+    .side-card { display:flex; gap:17px; align-items:flex-start; }
+    .side-emoji { display:grid; place-items:center; width:51px; height:51px; background:var(--goldPale); border-radius:14px; font-size:1.55rem; flex:none; }
+    .side-card h2 { margin-bottom:7px; }
+    .side-card p { color:var(--muted); margin:0; font-size:.91rem; }
+    .mini-count { display:inline-flex; padding:5px 10px; margin-top:14px; background:var(--surface2); border-radius:7px; color:var(--muted); font:600 .73rem var(--mono); }
+
+    .roadmap { padding-top:43px; }
+    .section-heading { display:flex; align-items:end; justify-content:space-between; gap:18px; margin:0 0 23px; }
+    .section-heading .eyebrow { color:var(--teal); display:block; margin-bottom:9px; }
+    .section-heading h2 { font:800 clamp(1.65rem,3vw,2.25rem)/1.18 var(--title); letter-spacing:-.045em; margin:0; }
+    .section-heading p { color:var(--muted); margin:9px 0 0; font-size:.93rem; }
+    .section-note { flex:none; background:var(--tealPale); color:var(--tealDark); font:600 .75rem var(--mono); padding:8px 12px; border-radius:999px; white-space:nowrap; }
+    .timeline { list-style:none; padding:0; margin:0 0 22px; }
+    .timeline-item { position:relative; display:grid; grid-template-columns:62px minmax(0,1fr); column-gap:12px; padding-bottom:14px; }
+    .timeline-item:not(:last-child)::before { content:""; position:absolute; top:38px; bottom:-8px; left:23px; width:2px; background:var(--line); }
+    .timeline-node { position:relative; display:grid; place-items:center; align-self:start; width:48px; height:48px; border:2px solid var(--line); border-radius:50%; background:var(--bg); color:var(--faint); font:600 .82rem var(--mono); z-index:1; transition:background .2s,color .2s,border-color .2s; }
+    .step-card { display:flex; align-items:center; gap:17px; width:100%; min-height:106px; padding:17px 23px; border:1px solid var(--line); border-radius:14px; background:var(--surface); box-shadow:var(--shadow); cursor:pointer; transition:transform .17s, border-color .17s, background .17s; }
+    .step-card:hover { transform:translateY(-2px); border-color:var(--teal); }
+    .step-card:focus-within { outline:2px solid var(--teal); outline-offset:2px; }
+    .step-icon { display:grid; place-items:center; width:55px; height:55px; border-radius:13px; background:var(--tealPale); font-size:1.6rem; flex:none; }
+    .step-info { flex:1; min-width:0; }
+    .step-kicker { display:block; color:var(--faint); margin-bottom:4px; font:600 .66rem/1.3 var(--mono); text-transform:uppercase; letter-spacing:.075em; }
+    .step-title { display:block; font:700 clamp(.99rem,1.8vw,1.13rem)/1.36 var(--title); letter-spacing:-.018em; }
+    .step-desc { display:block; margin-top:4px; font-size:.86rem; color:var(--muted); }
+    .step-action { display:flex; flex-direction:column; align-items:center; gap:7px; min-width:94px; flex:none; }
+    .step-checkbox { appearance:none; display:grid; place-content:center; margin:0; width:26px; height:26px; border:2px solid #afc6c7; border-radius:8px; background:var(--surface); cursor:pointer; transition:all .18s; }
+    .step-checkbox::before { content:""; width:13px; height:8px; border-left:2.5px solid white; border-bottom:2.5px solid white; transform:translateY(-2px) rotate(-45deg) scale(0); transition:transform .18s; }
+    .step-checkbox:checked { background:#0e8991; border-color:#0e8991; }
+    .step-checkbox:checked::before { transform:translateY(-2px) rotate(-45deg) scale(1); }
+    .step-status { color:var(--faint); font:600 .69rem var(--mono); white-space:nowrap; }
+    .timeline-item.completed .timeline-node { background:#158a81; color:#fff; border-color:#158a81; }
+    .timeline-item.completed .step-card { border-color:color-mix(in srgb, var(--teal) 40%, var(--line)); background:color-mix(in srgb, var(--tealPale) 24%, var(--surface)); }
+    .timeline-item.completed .step-title { color:var(--muted); text-decoration:line-through; text-decoration-color:var(--faint); text-decoration-thickness:1px; }
+    .timeline-item.completed .step-status { color:var(--tealDark); }
+    .timeline-item.completed:not(:last-child)::before { background:var(--teal); }
+    .secondary { margin-top:46px; }
+    .secondary .section-note { background:var(--goldPale); color:var(--gold); }
+    .timeline-item.optional .step-icon { background:var(--goldPale); }
+    .timeline-item.optional.completed .timeline-node { background:var(--gold); border-color:var(--gold); }
+    .timeline-item.optional.completed .step-card { border-color:color-mix(in srgb, var(--gold) 34%, var(--line)); background:color-mix(in srgb, var(--goldPale) 24%, var(--surface)); }
+    .timeline-item.optional.completed:not(:last-child)::before { background:var(--gold); }
+
+    .destination { position:relative; margin:46px 0 0 74px; border-radius:19px; padding:32px 34px; background:linear-gradient(113deg,#0d555f,#127f86 66%,#168c8e); color:#fff; overflow:hidden; box-shadow:0 18px 32px -20px #096972; }
+    .destination::before, .destination::after { content:""; position:absolute; border-radius:50%; border:1px solid rgba(255,255,255,.16); right:-90px; top:-100px; width:310px; height:310px; }
+    .destination::after { width:215px; height:215px; right:-45px; top:-50px; }
+    .destination-content { position:relative; z-index:1; display:flex; justify-content:space-between; align-items:center; gap:20px; }
+    .dest-main { max-width:650px; }
+    .dest-label { color:#b9fff2; font:600 .7rem var(--mono); letter-spacing:.12em; }
+    .destination h2 { margin:12px 0 8px; font:800 clamp(2rem,4vw,3rem)/1.08 var(--title); letter-spacing:-.05em; }
+    .destination p { margin:0; color:#d6f3f0; font-size:.98rem; }
+    .dest-icon { font-size:4.6rem; line-height:1; filter:drop-shadow(0 5px 12px rgba(5,30,31,.15)); flex:none; }
+    .dest-state { display:inline-flex; align-items:center; gap:8px; margin-top:18px; border:1px solid rgba(255,255,255,.34); border-radius:999px; padding:7px 12px; font:600 .78rem var(--mono); background:rgba(255,255,255,.10); }
+    .dest-state .dot { width:7px; height:7px; border-radius:50%; background:#ffc984; flex:none; }
+    .destination.ready .dest-state .dot { background:#b7ffde; }
+
+    .bottom { padding:34px 0 58px; display:flex; align-items:center; justify-content:space-between; gap:20px; color:var(--faint); font-size:.79rem; }
+    .bottom p { margin:0; max-width:70ch; }
+    .reset { border:1px solid var(--line); border-radius:9px; padding:10px 13px; background:var(--surface); color:var(--muted); font-weight:600; font-size:.81rem; white-space:nowrap; }
+    .reset:hover { border-color:var(--teal); color:var(--teal); }
+    @media (max-width:850px) {
+      .hero-inner { grid-template-columns:1fr .8fr; }
+      .hero-copy { padding:42px 0 42px 35px; }
+      .hero-art { padding-right:18px; }
+      .hero h1 { font-size:clamp(2rem,4.9vw,3rem); }
+      .postcard-sub { top:57px; }
+    }
+    @media (max-width:690px) {
+      .wrap { padding-inline:17px; }
+      .masthead-inner { min-height:70px; }
+      .text-nav, .theme-label { display:none; }
+      .theme-btn { padding:10px 12px; }
+      .hero { margin-top:17px; border-radius:18px; }
+      .hero-inner { display:flex; flex-direction:column; }
+      .hero-copy { padding:33px 25px 10px; }
+      .hero h1 { font-size:clamp(2.3rem,8vw,3.2rem); }
+      .hero-art { padding:20px 28px 33px; }
+      .postcard { max-width:390px; aspect-ratio:1.9; transform:rotate(1.2deg); }
+      .postcard-label { font-size:1.65rem; top:15px; left:18px; }
+      .postcard-sub { font-size:.56rem; top:46px; left:19px; }
+      .postcard-stamp { font-size:.59rem; right:12px; bottom:10px; padding:6px 9px; }
+      .dashboard { grid-template-columns:1fr; gap:12px; }
+      .panel { padding:22px; }
+      .roadmap { padding-top:33px; }
+      .section-heading { align-items:start; }
+      .section-note { font-size:.66rem; }
+      .timeline-item { grid-template-columns:43px minmax(0,1fr); gap:8px; }
+      .timeline-node { width:35px; height:35px; font-size:.68rem; }
+      .timeline-item:not(:last-child)::before { left:17px; top:35px; }
+      .step-card { padding:15px; gap:12px; min-height:93px; }
+      .step-icon { width:42px; height:42px; font-size:1.3rem; }
+      .step-action { min-width:30px; }
+      .step-status { display:none; }
+      .step-desc { font-size:.78rem; }
+      .destination { margin-left:51px; padding:26px 21px; }
+      .dest-icon { font-size:3rem; }
+      .bottom { flex-direction:column; align-items:flex-start; padding-top:23px; }
+    }
+    @media (max-width:440px) {
+      .brand-subtitle { letter-spacing:0; }
+      .hero-copy { padding:31px 21px 4px; }
+      .hero-art { padding:14px 20px 25px; }
+      .hero-lead { font-size:.92rem; }
+      .hero-pill { font-size:.7rem; }
+      .section-heading { flex-direction:column; gap:10px; }
+      .step-icon { display:none; }
+      .step-kicker { font-size:.61rem; }
+      .destination-content { align-items:flex-start; }
+      .dest-icon { display:none; }
+      .progress-summary { gap:9px; }
+    }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
+
+    /* Sincronização segura para o casal */
+    .auth-panel { margin: 24px 0 22px; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px 20px; box-shadow:var(--shadow); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px 18px; }
+    .auth-copy { min-width:220px; flex:1 1 310px; }
+    .auth-copy strong { display:block; font-family:var(--title); font-size:.98rem; }
+    .auth-copy p { margin:4px 0 0; font-size:.85rem; color:var(--muted); line-height:1.45; }
+    .auth-copy .account-line { margin-top:8px; font-size:.78rem; overflow-wrap:anywhere; }
+    .auth-actions { display:flex; align-items:center; flex-wrap:wrap; gap:8px; }
+    .auth-actions button { background:var(--tealPale); border:1px solid var(--teal); color:var(--tealDark); padding:10px 12px; border-radius:9px; font:600 .78rem var(--body); cursor:pointer; }
+    .auth-actions button.primary { background:var(--teal); color:#fff; }
+    .auth-actions button:hover:not(:disabled) { filter:brightness(.95); }
+    .auth-actions button:disabled { opacity:.55; cursor:not-allowed; }
+    .auth-actions button[hidden], .account-line[hidden] { display:none; }
+    .auth-panel[data-state="error"] { border-color:var(--gold); }
+    .auth-panel[data-state="ok"] { border-color:color-mix(in srgb, var(--teal) 43%, var(--line)); }
+    .step-checkbox:disabled { opacity:.55; cursor:not-allowed; }
+    .step-checkbox:disabled + .step-status { opacity:.7; }
+    @media (max-width:560px) { .auth-panel { margin-top:15px; padding:14px; } .auth-actions { width:100%; } .auth-actions button { flex:1 1 auto; } }
+
+    /* Decisões mutuamente exclusivas + notas do casal */
+    .timeline-item .step-more { grid-column:2; min-width:0; margin-top:8px; margin-bottom:4px; border:1px solid var(--line); border-radius:12px; background:var(--surface); box-shadow:var(--shadow); }
+    .step-more-summary { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; padding:11px 16px; cursor:pointer; color:var(--muted); font-size:.81rem; font-weight:700; list-style:none; }
+    .step-more-summary::-webkit-details-marker { display:none; }
+    .step-more-summary:hover { color:var(--tealDark); }
+    .step-more[open] .step-more-summary { border-bottom:1px solid var(--line); color:var(--tealDark); }
+    .step-more-hint { color:var(--faint); font:500 .71rem var(--mono); }
+    .step-more[open] .step-more-hint { display:none; }
+    .step-more-body { padding:15px 18px 18px; }
+    .status-choices { display:flex; flex-wrap:wrap; gap:9px; }
+    .choice-btn { display:inline-flex; align-items:center; gap:9px; border:1px solid var(--line); border-radius:9px; padding:9px 12px; background:var(--surface2); color:var(--muted); font-size:.81rem; font-weight:700; }
+    .choice-btn:hover:not(:disabled) { border-color:var(--teal); }
+    .choice-box { width:16px; height:16px; border:1.8px solid currentColor; border-radius:4px; display:grid; place-items:center; font-size:.7rem; color:transparent; flex:none; }
+    .choice-btn[aria-pressed="true"] .choice-box { background:currentColor; }
+    .choice-btn[aria-pressed="true"] .choice-box::after { content:'✓'; color:#fff; margin-top:-16px; position:relative; top:8px; }
+    .choice-btn[data-choice="adiado"][aria-pressed="true"] { border-color:#bb8a37; background:var(--goldPale); color:var(--gold); }
+    .choice-btn[data-choice="descartado"][aria-pressed="true"] { border-color:var(--faint); background:var(--surface2); color:var(--ink); }
+    .choice-btn:disabled { opacity:.55; cursor:not-allowed; }
+    .decision-help { color:var(--faint); font-size:.76rem; margin:11px 0 17px; }
+    .note-label { display:block; margin-bottom:8px; font-size:.84rem; font-weight:700; }
+    .note-label span { color:var(--faint); font-weight:400; }
+    .step-note { display:block; width:100%; border:1px solid var(--line); border-radius:9px; resize:vertical; min-height:69px; padding:10px 12px; background:var(--bg); color:var(--ink); font:400 .9rem/1.5 var(--body); }
+    .step-note:disabled { opacity:.65; cursor:not-allowed; }
+    .note-footer { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:9px; }
+    .note-feedback { font-size:.73rem; color:var(--faint); }
+    .note-save { border:1px solid var(--teal); background:var(--tealPale); color:var(--tealDark); border-radius:8px; padding:8px 12px; font-size:.77rem; font-weight:700; }
+    .note-save:disabled { opacity:.52; cursor:not-allowed; }
+    .timeline-item.adiado .timeline-node { border-color:var(--gold); color:var(--gold); background:var(--goldPale); }
+    .timeline-item.adiado .step-card { border-color:color-mix(in srgb, var(--gold) 45%, var(--line)); }
+    .timeline-item.adiado .step-status { color:var(--gold); }
+    .timeline-item.descartado .timeline-node { border-style:dashed; color:var(--faint); background:var(--surface2); }
+    .timeline-item.descartado .step-card { border-color:var(--faint); opacity:.81; }
+    .timeline-item.descartado .step-status { color:var(--muted); }
+    .timeline-item.descartado .step-title { text-decoration:line-through; text-decoration-style:dotted; text-decoration-color:var(--faint); }
+    .progress-breakdown { margin:11px 0 0; font-size:.81rem; color:var(--muted); }
+    .progress-breakdown strong { color:var(--ink); }
+    @media (max-width:690px) {
+      .step-more-body { padding:14px 13px 15px; }
+      .step-more-summary { padding:12px; }
+      .step-more-hint { font-size:.66rem; }
+      .step-card .step-action { min-width:32px; }
+      .step-status { display:block; font-size:.57rem; white-space:normal; text-align:center; }
+      .status-choices { flex-direction:column; }
+      .choice-btn { width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span>
+        <span><strong class="brand-title">Nosso caminho até Aruba</strong><span class="brand-subtitle">Pequenos passos, grande sonho</span></span>
+      </a>
+      <nav class="nav-actions" aria-label="Navegação principal">
+        <a class="text-nav" href="#prioridades">Nossas etapas</a>
+        <a class="text-nav" href="#aruba">O destino</a>
+        <button id="themeToggle" class="theme-btn" type="button" aria-label="Alternar tema de cores" title="Alternar tema"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Tema</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio" class="wrap">
+
+    <section class="auth-panel" id="authPanel" data-state="waiting" aria-label="Acesso ao progresso compartilhado">
+      <div class="auth-copy">
+        <strong>🔐 Nosso progresso compartilhado</strong>
+        <p id="syncStatus" role="status" aria-live="polite">Preparando acesso seguro...</p>
+        <p id="accountLine" class="account-line" hidden></p>
+      </div>
+      <div class="auth-actions">
+        <button type="button" class="primary" id="loginGoogle" hidden>Entrar com Google</button>
+        <button type="button" id="copyUid" hidden>Copiar meu ID</button>
+        <button type="button" id="logoutGoogle" hidden>Sair</button>
+      </div>
+    </section>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow">✈ Nosso plano de conquistas</span>
+          <h1 id="hero-title">Qual passo falta para conseguirmos <em>viajar?</em></h1>
+          <p class="hero-lead">Antes de fazer as malas, temos algumas coisas para resolver. Uma conquista de cada vez, até chegarmos à tão sonhada Aruba. 🌴</p>
+          <div class="hero-tags" aria-label="Resumo do plano"><span class="hero-pill">05 prioridades essenciais</span><span class="hero-pill">04 desejos para depois</span><span class="hero-pill">01 destino dos sonhos</span></div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="postcard">
+            <svg viewBox="0 0 520 420" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#91d8df"/><stop offset=".65" stop-color="#c4f0e8"/><stop offset="1" stop-color="#f8e3b7"/></linearGradient>
+                <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#42bdc2"/><stop offset="1" stop-color="#007c98"/></linearGradient>
+              </defs>
+              <rect width="520" height="420" fill="url(#sky)"/>
+              <circle cx="381" cy="109" r="46" fill="#fff5c3" opacity=".93"/>
+              <path d="M0 241c65-14 110-8 182 1s137 5 204-4 111-6 134-6v188H0Z" fill="url(#sea)"/>
+              <path d="M0 269c103-13 155-6 218 4s168 3 302-13v13c-81 15-162 18-243 13S95 274 0 285Z" fill="#b3f5e9" opacity=".64"/>
+              <path d="M0 330c101-20 205-19 290 4s143 25 230 13v73H0Z" fill="#f7e2b2"/>
+              <path d="M0 357c83-22 177-9 259 12s175 13 261 4" fill="none" stroke="#fff8e4" stroke-width="6" opacity=".77"/>
+              <path d="M97 382c0-87 24-143 37-174" fill="none" stroke="#5c5142" stroke-width="13" stroke-linecap="round"/>
+              <path d="M133 214c-56-36-106-8-109 10 31-11 76 5 109 9M134 214c-3-64-56-83-76-78 20 20 44 43 67 88M134 213c42-52 91-41 105-24-33-1-74 21-100 38M134 214c6-60 45-85 70-89-16 31-30 55-62 104M130 216c-39-57-80-50-99-35 37 6 69 24 99 43" fill="#2e8378" stroke="#2e8378" stroke-width="4" stroke-linejoin="round"/>
+              <path d="M426 349c-1-48 14-81 19-98" fill="none" stroke="#615543" stroke-width="8" stroke-linecap="round"/>
+              <path d="M444 254c-32-29-58-16-65-7 22-3 41 10 67 16M445 254c2-35-24-47-38-47 11 15 25 29 36 50M444 254c22-26 51-23 60-14-22 1-39 12-59 22M445 254c4-32 24-49 36-54-6 20-20 42-34 59" fill="#308578" stroke="#308578" stroke-width="3"/>
+              <path d="m284 86 24-12-5 13 22 3-5 7-20-2-11 10-6-1 6-13-22 1Z" fill="#fff" stroke="#528a91" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M225 134c30-29 46-35 76-38" stroke="#fdfcf2" stroke-width="2.5" stroke-dasharray="4 9" fill="none" stroke-linecap="round"/>
+              <path d="M317 357c17-2 35 4 49 11" stroke="#e9ca91" stroke-width="3" stroke-linecap="round" fill="none"/>
+              <path d="M349 378c18 2 29 5 40 12" stroke="#e9ca91" stroke-width="3" stroke-linecap="round" fill="none"/>
+            </svg>
+            <div class="postcard-label">ARUBA</div>
+            <div class="postcard-sub">ONE DAY, WE'LL BE THERE.</div>
+            <div class="postcard-stamp">🌴 DESTINO FINAL</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard" aria-label="Acompanhamento do plano">
+      <div class="panel">
+        <span class="panel-label">Nossa evolução</span>
+        <div class="progress-summary">
+          <div><h2>Prioridades essenciais</h2><p id="progressSentence" style="margin:7px 0 0;color:var(--muted);font-size:.9rem">Cada etapa concluída nos aproxima do sonho.</p></div>
+          <div id="progressFigure" class="progress-figure" aria-label="0 de 5 prioridades resolvidas">0<small>/5</small></div>
+        </div>
+        <div class="progress-bar" role="progressbar" aria-label="Progresso das prioridades essenciais" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+        <div class="progress-footer"><span id="progressDetail">0% resolvido</span><span><b id="remainingCount">5</b> etapas em aberto</span></div>
+        <p id="progressBreakdown" class="progress-breakdown">O progresso conta itens concluídos e descartados definitivamente, sem confundir os dois.</p>
+      </div>
+      <div class="panel side-card">
+        <span class="side-emoji" aria-hidden="true">✨</span>
+        <div>
+          <span class="panel-label">Sem pressa com o restante</span>
+          <h2>Desejos podem esperar</h2>
+          <p>Cafeteira, aspirador, Xbox e celular estão na nossa lista, mas não precisam impedir a viagem.</p>
+          <span id="optionalCount" class="mini-count">0 de 4 desejos realizados</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="prioridades" class="roadmap" aria-labelledby="essenciais-titulo">
+      <div class="section-heading">
+        <div><span class="eyebrow">ETAPA 01 · O QUE VEM PRIMEIRO</span><h2 id="essenciais-titulo">Arrumar a casa e cuidar do carro</h2><p>Marquem como concluído, adiem ou descartem o que deixar de fazer sentido. Cada decisão pode ter uma observação. Itens adiados continuam em aberto.</p></div>
+        <span class="section-note">Prioridades essenciais</span>
+      </div>
+      <ol class="timeline" aria-label="Lista de prioridades essenciais">
+        <li class="timeline-item" data-id="colchao" data-category="essential">
+          <span class="timeline-node" aria-hidden="true">01</span>
+          <label class="step-card"><span class="step-icon" aria-hidden="true">🛏️</span><span class="step-info"><span class="step-kicker">Quarto · Conforto</span><strong class="step-title">Trocar o colchão</strong><span class="step-desc">Uma boa noite de sono começa aqui.</span></span><span class="step-action"><input class="step-checkbox" type="checkbox" aria-label="Trocar o colchão concluído"><span class="step-status">Pendente</span></span></label>
+        
+          <details class="step-more">
+            <summary class="step-more-summary"><span>⚙ Decisão e observação</span><span class="step-more-hint">Abrir opções ▾</span></summary>
+            <div class="step-more-body">
+              <div class="status-choices" role="group" aria-label="Outras decisões para este item">
+                <button type="button" class="choice-btn" data-choice="adiado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Adiar por enquanto</button>
+                <button type="button" class="choice-btn" data-choice="descartado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Descartar definitivamente</button>
+              </div>
+              <p class="decision-help">Marque apenas uma decisão. Clique novamente para voltar a Pendente. O check do cartão significa Concluído.</p>
+              <label class="note-label" for="note-colchao">Observação <span>(opcional)</span></label>
+              <textarea id="note-colchao" class="step-note" maxlength="400" rows="2" placeholder="Ex.: vamos rever isso no próximo semestre" disabled></textarea>
+              <div class="note-footer"><span class="note-feedback" aria-live="polite">Sem observação</span><button type="button" class="note-save" disabled>Salvar observação</button></div>
+            </div>
+          </details></li>
+        <li class="timeline-item" data-id="porta" data-category="essential">
+          <span class="timeline-node" aria-hidden="true">02</span>
+          <label class="step-card"><span class="step-icon" aria-hidden="true">🚪</span><span class="step-info"><span class="step-kicker">Banheiro · Reforma</span><strong class="step-title">Trocar a porta do banheiro</strong><span class="step-desc">Contratar um marceneiro para fazer a instalação.</span></span><span class="step-action"><input class="step-checkbox" type="checkbox" aria-label="Trocar a porta do banheiro concluído"><span class="step-status">Pendente</span></span></label>
+        
+          <details class="step-more">
+            <summary class="step-more-summary"><span>⚙ Decisão e observação</span><span class="step-more-hint">Abrir opções ▾</span></summary>
+            <div class="step-more-body">
+              <div class="status-choices" role="group" aria-label="Outras decisões para este item">
+                <button type="button" class="choice-btn" data-choice="adiado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Adiar por enquanto</button>
+                <button type="button" class="choice-btn" data-choice="descartado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Descartar definitivamente</button>
+              </div>
+              <p class="decision-help">Marque apenas uma decisão. Clique novamente para voltar a Pendente. O check do cartão significa Concluído.</p>
+              <label class="note-label" for="note-porta">Observação <span>(opcional)</span></label>
+              <textarea id="note-porta" class="step-note" maxlength="400" rows="2" placeholder="Ex.: vamos rever isso no próximo semestre" disabled></textarea>
+              <div class="note-footer"><span class="note-feedback" aria-live="polite">Sem observação</span><button type="button" class="note-save" disabled>Salvar observação</button></div>
+            </div>
+          </details></li>
+        <li class="timeline-item" data-id="tampas" data-category="essential">
+          <span class="timeline-node" aria-hidden="true">03</span>
+          <label class="step-card"><span class="step-icon" aria-hidden="true">🚽</span><span class="step-info"><span class="step-kicker">Banheiro · Acabamento</span><strong class="step-title">Trocar as tampas dos vasos sanitários</strong><span class="step-desc">Resolver mais esse detalhe da casa.</span></span><span class="step-action"><input class="step-checkbox" type="checkbox" aria-label="Trocar as tampas dos vasos sanitários concluído"><span class="step-status">Pendente</span></span></label>
+        
+          <details class="step-more">
+            <summary class="step-more-summary"><span>⚙ Decisão e observação</span><span class="step-more-hint">Abrir opções ▾</span></summary>
+            <div class="step-more-body">
+              <div class="status-choices" role="group" aria-label="Outras decisões para este item">
+                <button type="button" class="choice-btn" data-choice="adiado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Adiar por enquanto</button>
+                <button type="button" class="choice-btn" data-choice="descartado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Descartar definitivamente</button>
+              </div>
+              <p class="decision-help">Marque apenas uma decisão. Clique novamente para voltar a Pendente. O check do cartão significa Concluído.</p>
+              <label class="note-label" for="note-tampas">Observação <span>(opcional)</span></label>
+              <textarea id="note-tampas" class="step-note" maxlength="400" rows="2" placeholder="Ex.: vamos rever isso no próximo semestre" disabled></textarea>
+              <div class="note-footer"><span class="note-feedback" aria-live="polite">Sem observação</span><button type="button" class="note-save" disabled>Salvar observação</button></div>
+            </div>
+          </details></li>
+        <li class="timeline-item" data-id="suspensao" data-category="essential">
+          <span class="timeline-node" aria-hidden="true">04</span>
+          <label class="step-card"><span class="step-icon" aria-hidden="true">🚗</span><span class="step-info"><span class="step-kicker">Carro · Manutenção</span><strong class="step-title">Fazer a manutenção da suspensão</strong><span class="step-desc">Colocar a manutenção do carro em dia.</span></span><span class="step-action"><input class="step-checkbox" type="checkbox" aria-label="Manutenção da suspensão do carro concluída"><span class="step-status">Pendente</span></span></label>
+        
+          <details class="step-more">
+            <summary class="step-more-summary"><span>⚙ Decisão e observação</span><span class="step-more-hint">Abrir opções ▾</span></summary>
+            <div class="step-more-body">
+              <div class="status-choices" role="group" aria-label="Outras decisões para este item">
+                <button type="button" class="choice-btn" data-choice="adiado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Adiar por enquanto</button>
+                <button type="button" class="choice-btn" data-choice="descartado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Descartar definitivamente</button>
+              </div>
+              <p class="decision-help">Marque apenas uma decisão. Clique novamente para voltar a Pendente. O check do cartão significa Concluído.</p>
+              <label class="note-label" for="note-suspensao">Observação <span>(opcional)</span></label>
+              <textarea id="note-suspensao" class="step-note" maxlength="400" rows="2" placeholder="Ex.: vamos rever isso no próximo semestre" disabled></textarea>
+              <div class="note-footer"><span class="note-feedback" aria-live="polite">Sem observação</span><button type="button" class="note-save" disabled>Salvar observação</button></div>
+            </div>
+          </details></li>
+        <li class="timeline-item" data-id="toalhas" data-category="essential">
+          <span class="timeline-node" aria-hidden="true">05</span>
+          <label class="step-card"><span class="step-icon" aria-hidden="true">🧺</span><span class="step-info"><span class="step-kicker">Casa · Enxoval</span><strong class="step-title">Renovar o enxoval de toalhas</strong><span class="step-desc">Deixar esse item da casa resolvido.</span></span><span class="step-action"><input class="step-checkbox" type="checkbox" aria-label="Enxoval de toalhas concluído"><span class="step-status">Pendente</span></span></label>
+        
+          <details class="step-more">
+            <summary class="step-more-summary"><span>⚙ Decisão e observação</span><span class="step-more-hint">Abrir opções ▾</span></summary>
+            <div class="step-more-body">
+              <div class="status-choices" role="group" aria-label="Outras decisões para este item">
+                <button type="button" class="choice-btn" data-choice="adiado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Adiar por enquanto</button>
+                <button type="button" class="choice-btn" data-choice="descartado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Descartar definitivamente</button>
+              </div>
+              <p class="decision-help">Marque apenas uma decisão. Clique novamente para voltar a Pendente. O check do cartão significa Concluído.</p>
+              <label class="note-label" for="note-toalhas">Observação <span>(opcional)</span></label>
+              <textarea id="note-toalhas" class="step-note" maxlength="400" rows="2" placeholder="Ex.: vamos rever isso no próximo semestre" disabled></textarea>
+              <div class="note-footer"><span class="note-feedback" aria-live="polite">Sem observação</span><button type="button" class="note-save" disabled>Salvar observação</button></div>
+            </div>
+          </details></li>
+      </ol>
+    </section>
+
+    <section class="secondary" aria-labelledby="extras-titulo">
+      <div class="section-heading">
+        <div><span class="eyebrow">ETAPA 02 · SEM URGÊNCIA</span><h2 id="extras-titulo">Os desejos para depois</h2><p>Coisas que queremos, mas que podem esperar. A viagem continua sendo o sonho maior.</p></div>
+        <span class="section-note">Menor prioridade</span>
+      </div>
+      <ol class="timeline" aria-label="Lista de desejos de menor prioridade" start="6">
+        <li class="timeline-item optional" data-id="cafeteira" data-category="optional"><span class="timeline-node" aria-hidden="true">06</span><label class="step-card"><span class="step-icon" aria-hidden="true">☕</span><span class="step-info"><span class="step-kicker">Desejo · Cozinha</span><strong class="step-title">Cafeteira</strong><span class="step-desc">Um mimo para a rotina.</span></span><span class="step-action"><input class="step-checkbox" type="checkbox" aria-label="Cafeteira concluída"><span class="step-status">Pendente</span></span></label>
+          <details class="step-more">
+            <summary class="step-more-summary"><span>⚙ Decisão e observação</span><span class="step-more-hint">Abrir opções ▾</span></summary>
+            <div class="step-more-body">
+              <div class="status-choices" role="group" aria-label="Outras decisões para este item">
+                <button type="button" class="choice-btn" data-choice="adiado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Adiar por enquanto</button>
+                <button type="button" class="choice-btn" data-choice="descartado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Descartar definitivamente</button>
+              </div>
+              <p class="decision-help">Marque apenas uma decisão. Clique novamente para voltar a Pendente. O check do cartão significa Concluído.</p>
+              <label class="note-label" for="note-cafeteira">Observação <span>(opcional)</span></label>
+              <textarea id="note-cafeteira" class="step-note" maxlength="400" rows="2" placeholder="Ex.: vamos rever isso no próximo semestre" disabled></textarea>
+              <div class="note-footer"><span class="note-feedback" aria-live="polite">Sem observação</span><button type="button" class="note-save" disabled>Salvar observação</button></div>
+            </div>
+          </details></li>
+        <li class="timeline-item optional" data-id="aspirador" data-category="optional"><span class="timeline-node" aria-hidden="true">07</span><label class="step-card"><span class="step-icon" aria-hidden="true">🧹</span><span class="step-info"><span class="step-kicker">Desejo · Casa</span><strong class="step-title">Aspirador de pó</strong><span class="step-desc">Mais praticidade na limpeza.</span></span><span class="step-action"><input class="step-checkbox" type="checkbox" aria-label="Aspirador de pó concluído"><span class="step-status">Pendente</span></span></label>
+          <details class="step-more">
+            <summary class="step-more-summary"><span>⚙ Decisão e observação</span><span class="step-more-hint">Abrir opções ▾</span></summary>
+            <div class="step-more-body">
+              <div class="status-choices" role="group" aria-label="Outras decisões para este item">
+                <button type="button" class="choice-btn" data-choice="adiado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Adiar por enquanto</button>
+                <button type="button" class="choice-btn" data-choice="descartado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Descartar definitivamente</button>
+              </div>
+              <p class="decision-help">Marque apenas uma decisão. Clique novamente para voltar a Pendente. O check do cartão significa Concluído.</p>
+              <label class="note-label" for="note-aspirador">Observação <span>(opcional)</span></label>
+              <textarea id="note-aspirador" class="step-note" maxlength="400" rows="2" placeholder="Ex.: vamos rever isso no próximo semestre" disabled></textarea>
+              <div class="note-footer"><span class="note-feedback" aria-live="polite">Sem observação</span><button type="button" class="note-save" disabled>Salvar observação</button></div>
+            </div>
+          </details></li>
+        <li class="timeline-item optional" data-id="xbox" data-category="optional"><span class="timeline-node" aria-hidden="true">08</span><label class="step-card"><span class="step-icon" aria-hidden="true">🎮</span><span class="step-info"><span class="step-kicker">Desejo · Lazer</span><strong class="step-title">Xbox</strong><span class="step-desc">Diversão também está na lista.</span></span><span class="step-action"><input class="step-checkbox" type="checkbox" aria-label="Xbox concluído"><span class="step-status">Pendente</span></span></label>
+          <details class="step-more">
+            <summary class="step-more-summary"><span>⚙ Decisão e observação</span><span class="step-more-hint">Abrir opções ▾</span></summary>
+            <div class="step-more-body">
+              <div class="status-choices" role="group" aria-label="Outras decisões para este item">
+                <button type="button" class="choice-btn" data-choice="adiado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Adiar por enquanto</button>
+                <button type="button" class="choice-btn" data-choice="descartado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Descartar definitivamente</button>
+              </div>
+              <p class="decision-help">Marque apenas uma decisão. Clique novamente para voltar a Pendente. O check do cartão significa Concluído.</p>
+              <label class="note-label" for="note-xbox">Observação <span>(opcional)</span></label>
+              <textarea id="note-xbox" class="step-note" maxlength="400" rows="2" placeholder="Ex.: vamos rever isso no próximo semestre" disabled></textarea>
+              <div class="note-footer"><span class="note-feedback" aria-live="polite">Sem observação</span><button type="button" class="note-save" disabled>Salvar observação</button></div>
+            </div>
+          </details></li>
+        <li class="timeline-item optional" data-id="celular" data-category="optional"><span class="timeline-node" aria-hidden="true">09</span><label class="step-card"><span class="step-icon" aria-hidden="true">📱</span><span class="step-info"><span class="step-kicker">Desejo · Tecnologia</span><strong class="step-title">Celular</strong><span class="step-desc">Uma troca que pode ficar para outro momento.</span></span><span class="step-action"><input class="step-checkbox" type="checkbox" aria-label="Celular concluído"><span class="step-status">Pendente</span></span></label>
+          <details class="step-more">
+            <summary class="step-more-summary"><span>⚙ Decisão e observação</span><span class="step-more-hint">Abrir opções ▾</span></summary>
+            <div class="step-more-body">
+              <div class="status-choices" role="group" aria-label="Outras decisões para este item">
+                <button type="button" class="choice-btn" data-choice="adiado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Adiar por enquanto</button>
+                <button type="button" class="choice-btn" data-choice="descartado" aria-pressed="false"><span class="choice-box" aria-hidden="true">✓</span> Descartar definitivamente</button>
+              </div>
+              <p class="decision-help">Marque apenas uma decisão. Clique novamente para voltar a Pendente. O check do cartão significa Concluído.</p>
+              <label class="note-label" for="note-celular">Observação <span>(opcional)</span></label>
+              <textarea id="note-celular" class="step-note" maxlength="400" rows="2" placeholder="Ex.: vamos rever isso no próximo semestre" disabled></textarea>
+              <div class="note-footer"><span class="note-feedback" aria-live="polite">Sem observação</span><button type="button" class="note-save" disabled>Salvar observação</button></div>
+            </div>
+          </details></li>
+      </ol>
+    </section>
+
+    <section id="aruba" class="destination" aria-labelledby="dest-title">
+      <div class="destination-content">
+        <div class="dest-main"><span class="dest-label">10 · A GRANDE RECOMPENSA</span><h2 id="dest-title">A tão sonhada viagem para Aruba! 🌴</h2><p id="destinationMessage">Mais do que um lugar no mapa, um sonho que estamos construindo juntos, passo a passo.</p><span id="destinationState" class="dest-state"><span class="dot" aria-hidden="true"></span><span id="destinationStatus">Nosso sonho está no horizonte</span></span></div>
+        <span class="dest-icon" aria-hidden="true">✈️</span>
+      </div>
+    </section>
+
+    <footer class="bottom">
+      <p>💚 Com as duas contas autorizadas, cada decisão e observação é salva com segurança e aparece nos dispositivos de vocês. É preciso estar conectado à internet.</p>
+      <button type="button" id="resetButton" class="reset" disabled>↺ Reiniciar decisões</button>
+    </footer>
+  </main>
+  <script type="module">
+    // CONFIGURAÇÃO: cole aqui as informações do seu aplicativo WEB no console do Firebase.
+    // O objeto firebaseConfig não é segredo. A segurança dos dados depende das regras Firestore.
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD1o-UNrpkH_SBp6MLqkzVowGZysO5nVO0",
+      authDomain: "checklist-dd775.firebaseapp.com",
+      projectId: "checklist-dd775",
+      storageBucket: "checklist-dd775.firebasestorage.app",
+      messagingSenderId: "976079336551",
+      appId: "1:976079336551:web:86dfa4ff2731aa321d90c2",
+      measurementId: "G-MKN329BYEV"
+    };
+
+    const THEME_KEY = 'nosso-caminho-aruba-tema-v1';
+    const items = [...document.querySelectorAll('.timeline-item[data-id]')];
+    const essentials = items.filter(item => item.dataset.category === 'essential');
+    const optionals = items.filter(item => item.dataset.category === 'optional');
+    const themeButton = document.getElementById('themeToggle');
+    const loginButton = document.getElementById('loginGoogle');
+    const logoutButton = document.getElementById('logoutGoogle');
+    const copyUidButton = document.getElementById('copyUid');
+    const accountLine = document.getElementById('accountLine');
+    const syncStatus = document.getElementById('syncStatus');
+    const authPanel = document.getElementById('authPanel');
+    const resetButton = document.getElementById('resetButton');
+
+    // Um status por item evita marcar Concluído e Descartado ao mesmo tempo.
+    const STATUS = new Set(['pendente', 'concluido', 'adiado', 'descartado']);
+    const state = Object.fromEntries(items.map(item => [item.dataset.id, { status:'pendente', nota:'' }]));
+    let auth, db, currentUser, planDoc, unsubscribe = null;
+    let canEdit = false;
+    let sdk = null;
+    function message(text, level = 'waiting') {
+      syncStatus.textContent = text;
+      authPanel.dataset.state = level;
+    }
+    function enableEditing(allowed) {
+      canEdit = allowed;
+      items.forEach(item => {
+        item.querySelector('.step-checkbox').disabled = !allowed;
+        item.querySelectorAll('.choice-btn').forEach(button => { button.disabled = !allowed; });
+        item.querySelector('.step-note').disabled = !allowed;
+        const button = item.querySelector('.note-save');
+        button.disabled = !allowed || item.dataset.noteDirty !== 'true';
+      });
+      resetButton.disabled = !allowed || items.every(item => state[item.dataset.id].status === 'pendente');
+    }
+    function normalized(value) {
+      // Compatibilidade com o formato anterior, em que cada item era true / false.
+      if (typeof value === 'boolean') return {status:value ? 'concluido' : 'pendente', nota:''};
+      if (!value || typeof value !== 'object') return {status:'pendente', nota:''};
+      return {
+        status:STATUS.has(value.status) ? value.status : 'pendente',
+        nota:typeof value.nota === 'string' ? value.nota.slice(0,400) : ''
+      };
+    }
+    function clearChoices() {
+      items.forEach(item => {
+        const id = item.dataset.id;
+        state[id] = {status:'pendente',nota:''};
+        item.dataset.noteDirty = 'false';
+        item.querySelector('.step-note').value = '';
+        item.querySelector('.step-more').open = false;
+        item.querySelector('.note-feedback').textContent = 'Sem observação';
+      });
+      update();
+    }
+    function update() {
+      items.forEach((item,index) => {
+        const {status, nota} = state[item.dataset.id];
+        item.classList.toggle('completed',status === 'concluido');
+        item.classList.toggle('adiado',status === 'adiado');
+        item.classList.toggle('descartado',status === 'descartado');
+        item.querySelector('.step-checkbox').checked = status === 'concluido';
+        item.querySelector('.step-status').textContent = {
+          pendente:'Pendente', concluido:'Concluído ✓', adiado:'Adiado ⏸', descartado:'Descartado ✕'
+        }[status];
+        item.querySelector('.timeline-node').textContent = {
+          pendente:String(index + 1).padStart(2,'0'), concluido:'✓', adiado:'Ⅱ', descartado:'×'
+        }[status];
+        item.querySelectorAll('.choice-btn').forEach(button => {
+          button.setAttribute('aria-pressed', String(button.dataset.choice === status));
+        });
+        item.querySelector('.step-more-hint').textContent = nota.trim() ? '📝 Com observação ▾' : 'Abrir opções ▾';
+        if (item.dataset.noteDirty !== 'true') item.querySelector('.step-note').value = nota;
+      });
+      const essentialStatuses = essentials.map(item => state[item.dataset.id].status);
+      const done = essentialStatuses.filter(status => status === 'concluido').length;
+      const discarded = essentialStatuses.filter(status => status === 'descartado').length;
+      const delayed = essentialStatuses.filter(status => status === 'adiado').length;
+      const resolved = done + discarded;
+      const extraDone = optionals.filter(item => state[item.dataset.id].status === 'concluido').length;
+      const total = essentials.length;
+      const percent = Math.round(resolved / total * 100);
+      document.getElementById('progressFigure').innerHTML = `${resolved}<small>/${total}</small>`;
+      document.getElementById('progressFigure').setAttribute('aria-label',`${resolved} de ${total} prioridades resolvidas`);
+      document.getElementById('progressFill').style.width = `${percent}%`;
+      document.getElementById('progressBar').setAttribute('aria-valuenow', String(resolved));
+      document.getElementById('progressDetail').textContent = `${percent}% resolvido`;
+      document.getElementById('remainingCount').textContent = String(total - resolved);
+      document.getElementById('progressBreakdown').textContent = `${done} concluída${done === 1 ? '' : 's'} · ${discarded} descartada${discarded === 1 ? '' : 's'} definitivamente · ${delayed} adiada${delayed === 1 ? '' : 's'}`;
+      document.getElementById('optionalCount').textContent = `${extraDone} de ${optionals.length} desejos realizados`;
+      document.getElementById('progressSentence').textContent = resolved === total
+        ? 'Todas as prioridades foram resolvidas: concluídas ou descartadas por decisão de vocês.'
+        : resolved === 0 ? 'Cada etapa ou decisão nos aproxima do sonho.'
+        : `Já resolvemos ${resolved} ${resolved === 1 ? 'prioridade' : 'prioridades'}. Vamos em frente!`;
+      const destination = document.getElementById('aruba');
+      destination.classList.toggle('ready', resolved === total);
+      document.getElementById('destinationStatus').textContent = resolved === total
+        ? 'Prioridades decididas · hora de planejar Aruba!'
+        : 'Nosso sonho está no horizonte';
+      document.getElementById('destinationMessage').textContent = resolved === total
+        ? 'Resolvemos as prioridades: o que foi feito ficou concluído e o que perdeu sentido foi descartado. Agora podemos planejar a viagem dos sonhos!'
+        : 'Mais do que um lugar no mapa, um sonho que estamos construindo juntos, passo a passo.';
+      enableEditing(canEdit);
+    }
+
+    // O tema é uma preferência local; a marcação das tarefas não é salva localmente.
+    try {
+      const theme = localStorage.getItem(THEME_KEY);
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+    } catch (_) {}
+    function setThemeIcon() {
+      const dark = document.documentElement.dataset.theme === 'dark' ||
+        (!document.documentElement.dataset.theme && window.matchMedia?.('(prefers-color-scheme: dark)').matches);
+      themeButton.querySelector('.theme-icon').textContent = dark ? '☀' : '☾';
+      themeButton.title = dark ? 'Ativar tema claro' : 'Ativar tema escuro';
+      themeButton.setAttribute('aria-label', themeButton.title);
+    }
+    themeButton.addEventListener('click', () => {
+      const dark = document.documentElement.dataset.theme === 'dark' ||
+        (!document.documentElement.dataset.theme && window.matchMedia?.('(prefers-color-scheme: dark)').matches);
+      document.documentElement.dataset.theme = dark ? 'light' : 'dark';
+      try { localStorage.setItem(THEME_KEY, document.documentElement.dataset.theme); } catch (_) {}
+      setThemeIcon();
+    });
+    setThemeIcon();
+    enableEditing(false);
+    update();
+
+    function readableError(err) {
+      if (err?.code === 'permission-denied') return 'Acesso ainda não autorizado. Copie seu ID abaixo e adicione-o às regras do Firestore.';
+      if (err?.code === 'auth/unauthorized-domain') return 'Adicione o domínio do GitHub Pages em Authentication → Configurações → Domínios autorizados.';
+      if (err?.code === 'auth/popup-blocked') return 'O navegador bloqueou a janela de login. Permita pop-ups e tente novamente.';
+      if (err?.code === 'auth/popup-closed-by-user' || err?.code === 'auth/cancelled-popup-request') return 'Login não concluído. Clique novamente para entrar.';
+      if (!navigator.onLine || err?.code === 'unavailable') return 'Sem conexão com o Firebase. Confira sua internet e tente novamente.';
+      return `Não foi possível concluir a operação (${err?.code || 'erro inesperado'}).`;
+    }
+    function detach() {
+      if (unsubscribe) { unsubscribe(); unsubscribe = null; }
+      enableEditing(false);
+    }
+    function listenToPlan() {
+      detach();
+      clearChoices();
+      message('Conectando ao progresso compartilhado...');
+      planDoc = sdk.doc(db,'planos','aruba');
+      unsubscribe = sdk.onSnapshot(planDoc,{includeMetadataChanges:true}, snapshot => {
+        const data = snapshot.exists() ? snapshot.data() : {};
+        items.forEach(item => {
+          const id = item.dataset.id;
+          state[id] = normalized(data[id]);
+          if (item.dataset.noteDirty !== 'true') {
+            item.querySelector('.note-feedback').textContent = state[id].nota.trim() ? 'Observação sincronizada ✓' : 'Sem observação';
+          }
+        });
+        update();
+        enableEditing(true);
+        if (snapshot.metadata.hasPendingWrites) message('Salvando alteração...', 'waiting');
+        else if (snapshot.metadata.fromCache) message('Mostrando dados em cache. Aguardando confirmação do servidor...', 'waiting');
+        else message('✓ Sincronizado com segurança. As decisões e observações estão compartilhadas.', 'ok');
+      }, error => {
+        enableEditing(false);
+        message(readableError(error),'error');
+      });
+    }
+    async function setStatus(item, newStatus) {
+      if (!canEdit || !planDoc || !STATUS.has(newStatus)) return;
+      const id = item.dataset.id;
+      const previous = {...state[id]};
+      state[id] = {...previous, status:newStatus};
+      update();
+      try {
+        // O objeto do item mantém a decisão e a última nota SALVA.
+        // Alterações não salvas no textarea não são enviadas por engano.
+        await sdk.setDoc(planDoc,{[id]:{status:newStatus,nota:previous.nota}},{merge:true});
+      } catch (error) {
+        state[id] = previous;
+        update();
+        message('Não foi possível salvar a decisão. '+readableError(error),'error');
+      }
+    }
+    items.forEach(item => {
+      const check = item.querySelector('.step-checkbox');
+      const note = item.querySelector('.step-note');
+      const save = item.querySelector('.note-save');
+      const feedback = item.querySelector('.note-feedback');
+      check.addEventListener('change', () => {
+        setStatus(item, check.checked ? 'concluido' : 'pendente');
+      });
+      item.querySelectorAll('.choice-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const next = state[item.dataset.id].status === button.dataset.choice ? 'pendente' : button.dataset.choice;
+          setStatus(item,next);
+        });
+      });
+      note.addEventListener('input',() => {
+        item.dataset.noteDirty = String(note.value !== state[item.dataset.id].nota);
+        feedback.textContent = item.dataset.noteDirty === 'true' ? 'Observação não salva' : 'Observação já salva';
+        save.disabled = !canEdit || item.dataset.noteDirty !== 'true';
+      });
+      save.addEventListener('click',async () => {
+        if (!canEdit || !planDoc || item.dataset.noteDirty !== 'true') return;
+        const id = item.dataset.id;
+        const texto = note.value.slice(0,400);
+        const previous = {...state[id]};
+        save.disabled = true;
+        feedback.textContent = 'Salvando observação...';
+        try {
+          await sdk.setDoc(planDoc,{[id]:{status:state[id].status,nota:texto}},{merge:true});
+          // Se houve nova digitação enquanto salvava, preserve o rascunho atual.
+          state[id].nota = texto;
+          item.dataset.noteDirty = String(note.value !== texto);
+          feedback.textContent = item.dataset.noteDirty === 'true' ? 'Há alterações não salvas' : 'Observação salva ✓';
+          update();
+        } catch (error) {
+          state[id] = previous;
+          item.dataset.noteDirty = 'true';
+          feedback.textContent = 'Erro ao salvar. Tente novamente.';
+          message('Não foi possível salvar a observação. '+readableError(error),'error');
+        } finally {
+          save.disabled = !canEdit || item.dataset.noteDirty !== 'true';
+        }
+      });
+    });
+    resetButton.addEventListener('click', async () => {
+      if (!canEdit || !planDoc || items.every(item => state[item.dataset.id].status === 'pendente')) return;
+      if (!confirm('Todas as decisões voltarão para Pendente nos dois aparelhos. As observações serão mantidas. Continuar?')) return;
+      const reset = Object.fromEntries(items.map(item => [item.dataset.id,{status:'pendente',nota:state[item.dataset.id].nota}]));
+      try { await sdk.setDoc(planDoc,reset,{merge:true}); }
+      catch (error) { message('Não foi possível reiniciar. '+readableError(error),'error'); }
+    });
+    copyUidButton.addEventListener('click', async () => {
+      if (!currentUser) return;
+      try {
+        await navigator.clipboard.writeText(currentUser.uid);
+        message('ID copiado! Cole-o no arquivo firestore.rules para autorizar esta conta.', 'waiting');
+      } catch (_) {
+        window.prompt('Copie seu ID para as regras do Firestore:', currentUser.uid);
+      }
+    });
+
+    async function startFirebase() {
+      const configured = firebaseConfig.apiKey !== 'COLE_SUA_API_KEY' &&
+        firebaseConfig.projectId !== 'SEU_PROJETO' &&
+        firebaseConfig.appId !== 'COLE_SEU_APP_ID';
+      if (!configured) {
+        message('Falta configurar o Firebase no HTML. Veja o guia LEIA-ME.md incluído no pacote.', 'error');
+        return;
+      }
+      message('Carregando conexão segura...');
+      try {
+        const [{ initializeApp }, authSdk, store] = await Promise.all([
+          import('https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js'),
+          import('https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js'),
+          import('https://www.gstatic.com/firebasejs/12.19.0/firebase-firestore.js')
+        ]);
+        sdk = store;
+        const app = initializeApp(firebaseConfig);
+        auth = authSdk.getAuth(app);
+        db = store.getFirestore(app);
+        loginButton.hidden = false;
+        loginButton.addEventListener('click', async () => {
+          loginButton.disabled = true;
+          try { await authSdk.signInWithPopup(auth, new authSdk.GoogleAuthProvider()); }
+          catch (err) { message(readableError(err), 'error'); }
+          finally { loginButton.disabled = false; }
+        });
+        logoutButton.addEventListener('click', async () => {
+          try { await authSdk.signOut(auth); }
+          catch (err) { message(readableError(err), 'error'); }
+        });
+        authSdk.onAuthStateChanged(auth, user => {
+          detach();
+          currentUser = user;
+          if (!user) {
+            clearChecks();
+            accountLine.hidden = true;
+            copyUidButton.hidden = true;
+            logoutButton.hidden = true;
+            loginButton.hidden = false;
+            message('Entre com sua conta Google para visualizar e marcar o progresso do casal.');
+            return;
+          }
+          loginButton.hidden = true;
+          logoutButton.hidden = false;
+          copyUidButton.hidden = false;
+          accountLine.hidden = false;
+          accountLine.textContent = `${user.displayName || 'Conta Google'} · ${user.email || ''} · ID: ${user.uid}`;
+          listenToPlan();
+        }, err => message('Erro ao verificar login. ' + readableError(err), 'error'));
+      } catch (err) {
+        console.error('Firebase não inicializou:', err);
+        message('Não foi possível carregar o Firebase. Confira a internet e os dados de configuração.', 'error');
+      }
+    }
+    startFirebase();
+  </script>
+</body>
+</html>
