@@ -722,7 +722,7 @@
         enableEditing(true);
         if (snapshot.metadata.hasPendingWrites) message('Salvando alterações...', 'waiting');
         else if (snapshot.metadata.fromCache) message('Conectando ao servidor...', 'waiting');
-        else message('✓ Tudo sincronizado entre nós &#10084;&#65039;', 'ok');
+        else message('✓ Tudo sincronizado entre nós ❤️', 'ok');
       }, error => {
         enableEditing(false);
         message(readableError(error),'error');
