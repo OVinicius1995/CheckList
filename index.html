@@ -273,6 +273,15 @@
     .timeline-item.descartado .step-card { border-color:var(--faint); opacity:.81; }
     .timeline-item.descartado .step-status { color:var(--muted); }
     .timeline-item.descartado .step-title { text-decoration:line-through; text-decoration-style:dotted; text-decoration-color:var(--faint); }
+    /* O item permanece na linha do tempo, mas a caixa vira um indicador de descarte, sem clique. */
+    .timeline-item.descartado .step-card { cursor:default; }
+    .timeline-item.descartado .step-card:hover { transform:none; border-color:var(--faint); }
+    .timeline-item.descartado .step-checkbox { display:none; pointer-events:none; }
+    .timeline-item.descartado .step-action::before {
+      content:'×'; display:grid; place-items:center; width:26px; height:26px; box-sizing:border-box;
+      border:2px solid var(--faint); border-radius:8px; background:var(--surface2);
+      color:var(--muted); font:700 1.15rem/1 var(--title); pointer-events:none;
+    }
     .progress-breakdown { margin:11px 0 0; font-size:.81rem; color:var(--muted); }
     .progress-breakdown strong { color:var(--ink); }
     @media (max-width:690px) {
@@ -590,7 +599,7 @@
     function enableEditing(allowed) {
       canEdit = allowed;
       items.forEach(item => {
-        item.querySelector('.step-checkbox').disabled = !allowed;
+        item.querySelector('.step-checkbox').disabled = !allowed || state[item.dataset.id].status === 'descartado';
         item.querySelectorAll('.choice-btn').forEach(button => { button.disabled = !allowed; });
         item.querySelector('.step-note').disabled = !allowed;
         const button = item.querySelector('.note-save');
@@ -626,7 +635,7 @@
         item.classList.toggle('descartado',status === 'descartado');
         item.querySelector('.step-checkbox').checked = status === 'concluido';
         item.querySelector('.step-status').textContent = {
-          pendente:'Pendente', concluido:'Concluído ✓', adiado:'Adiado ⏸', descartado:'Descartado ✕'
+          pendente:'Pendente', concluido:'Concluído ✓', adiado:'Adiado ⏸', descartado:'Descartado'
         }[status];
         item.querySelector('.timeline-node').textContent = {
           pendente:String(index + 1).padStart(2,'0'), concluido:'✓', adiado:'Ⅱ', descartado:'×'
@@ -750,6 +759,11 @@
       const save = item.querySelector('.note-save');
       const feedback = item.querySelector('.note-feedback');
       check.addEventListener('change', () => {
+        // Um item descartado não pode ser marcado pelo checkbox do cartão.
+        if (state[item.dataset.id].status === 'descartado') {
+          check.checked = false;
+          return;
+        }
         setStatus(item, check.checked ? 'concluido' : 'pendente');
       });
       item.querySelectorAll('.choice-btn').forEach(button => {
